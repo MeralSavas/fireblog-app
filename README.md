@@ -3,8 +3,6 @@
 
 # Check The Live Website ➡️ Live Website
 
-# Visualization of the Website
-
 # Description
 
 Project aims to create a FireBlog App using React.
