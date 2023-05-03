@@ -72,9 +72,6 @@ Project(folder)
 
 - react-bootstrap, bootstrap
 
-# Overview
-
-I mastered HTML & CSS & JS & ReactJS features in this project. You can see the visual representation of the website above.
 
 # Notes
 
