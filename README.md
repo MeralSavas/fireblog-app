@@ -81,19 +81,3 @@ Step 2 : Use Firebase Auth for authentication and Firebase Realtime Database for
 
 Step 3 : You can use css frameworks like Bootstrap, Semantic UI, Material UI.
 
-Step 4 : You can view sample app on https://eds-fireblog.herokuapp.com/.
-
-Step 5 : Add project gif to your project and README.md file.
-
-# Resources
-
-🔥 You can use data.js for your own work.
-
-# Support
-
-- Open an Issue, I will check it a soon as possible 👀
-
-- Don't forget to show your support by ⭐ the project!!
-
-# ⌛ Happy Coding ✍
-
