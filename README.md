@@ -73,11 +73,3 @@ Project(folder)
 - react-bootstrap, bootstrap
 
 
-# Notes
-
-Step 1 : Create React App using npx create-react-app fireblog-app
-
-Step 2 : Use Firebase Auth for authentication and Firebase Realtime Database for CRUD operations.
-
-Step 3 : You can use css frameworks like Bootstrap, Semantic UI, Material UI.
-
