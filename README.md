@@ -9,7 +9,7 @@ Project aims to create a FireBlog App using React.
 
 # Used Language
 
-- improve coding skills within HTML & CSS & JS & ReactJS.
+- HTML & CSS & JS & ReactJS.
 
 # Project Skeleton
 
