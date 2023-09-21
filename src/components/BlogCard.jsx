@@ -1,59 +1,71 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import { CardHeader, Button } from "@mui/material";
+import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
 import { useNavigate } from "react-router-dom";
+import { Box, Button } from "@mui/material";
 
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+import blogpng from "../assets/blok.png";
 
-const BlogCard = ({ email, username, title, image, date }) => {
+const BlogCard = ({ item }) => {
   const navigate = useNavigate();
+  const { id, content, imageUrl, date, email, title } = item;
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
-      />
+    <Card
+      onClick={() =>
+        navigate(`details/${id}`, {
+          state: item,
+        })
+      }
+      sx={{
+        width: 350,
+        maxWidth: 345,
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 3px 10px",
+        height: 500,
+        transition: "transform .2s",
+        "&:hover": {
+          transform: "scale(1.01)",
+        },
+      }}
+    >
+      <CardHeader title={title} subheader={date} />
+      {imageUrl && (
+        <CardMedia
+          component="img"
+          height="254"
+          image={imageUrl}
+          alt="imageUrl"
+        />
+      )}
+      {!imageUrl && (
+        <CardMedia
+          component="img"
+          height="254"
+          image={blogpng}
+          alt="imageUrl"
+        />
+      )}
+
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+        <Typography
+          variant="body1"
+          className="lineClamp"
+          title={title}
+          color="secondary.dark"
+        >
+          {content}
         </Typography>
+        <Typography sx={{ mt: ".3rem" }}>{email}</Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <Button variant="outlined">Learn More</Button>
-      </CardActions>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Button>
+          <FavoriteIcon color="primary.light" />
+        </Button>
+      </Box>
     </Card>
   );
 };
