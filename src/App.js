@@ -1,9 +1,9 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import { red } from "@mui/material/colors";
 import { ToastContainer } from "react-toastify";
-import AuthProvider from "./contexts/AuthContext";
-import BlogProvider from "./contexts/BlogContext";
-import AppRouter from "./routers/AppRouter";
+import AuthProvider from "./context/AuthContext";
+import BlogProvider from "./context/BlogContext";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   const theme = createTheme({

@@ -8,9 +8,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import { useNavigate } from "react-router-dom";
-import { useBlogContext } from "../contexts/BlogContext";
+import { useBlogContext } from "../context/BlogContext";
 import { logouth } from "../helpers/firebase";
-import { useAuthContext } from "../contexts/AuthContext";
+import { useAuthContext } from "../context/AuthContext";
 import Avatar from "@mui/material/Avatar";
 
 const initialValues = {

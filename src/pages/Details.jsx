@@ -8,8 +8,8 @@ import Typography from "@mui/material/Typography";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import ReplyAllIcon from "@mui/icons-material/ReplyAll";
-import { useAuthContext } from "../contexts/AuthContext";
-import { useBlogContext } from "../contexts/BlogContext";
+import { useAuthContext } from "../context/AuthContext";
+import { useBlogContext } from "../context/BlogContext";
 import { DeleteBlog } from "../helpers/functions";
 
 const Details = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavbarComp from "../components/Navbar";
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/DashBoard";
 import Details from "../pages/Details";
 import Login from "../pages/Login";
 import NewBlog from "../pages/NewBlog";
