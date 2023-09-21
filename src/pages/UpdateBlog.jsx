@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { EditBlog } from "../helpers/functions";
 import { useNavigate } from "react-router-dom";
-import { useBlogContext } from "../contexts/BlogContext";
+import { useBlogContext } from "../context/BlogContext";
 
 const UpdateBlog = () => {
   const { blogInfo, setBlogInfo } = useBlogContext();
