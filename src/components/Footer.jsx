@@ -9,7 +9,7 @@ const Footer = () => {
       <Box
         sx={{
           position: "fixed",
-          backgroundColor: "secondary.main",
+          backgroundColor: "#26a69a",
 
           color: "white",
           width: "100%",
@@ -63,7 +63,7 @@ const Footer = () => {
             />
           </a>
         </Box>
-        © {new Date().getFullYear()} Sekunev
+        © {new Date().getFullYear()} Meral Savas
       </Box>
     </>
   );

@@ -79,7 +79,7 @@ const NavbarComp = () => {
               navigate("/");
             }}
           >
-            Sekunev Fire Blog App
+            Fire Blog App
           </Typography>
           <Typography
             variant="h4"

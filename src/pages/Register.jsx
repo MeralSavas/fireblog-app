@@ -55,7 +55,7 @@ const Register = () => {
         >
           <Avatar
             sx={{
-              backgroundColor: "primary.main",
+              backgroundColor: "#26a69a",
               m: "auto",
               width: 40,
               height: 40,
@@ -63,7 +63,7 @@ const Register = () => {
           >
             <LockIcon size="30" />
           </Avatar>
-          <Typography variant="h3" align="center" mb={2} color="primary.light">
+          <Typography variant="h3" align="center" mb={2} color="#26a69a">
             Register
           </Typography>
           <Formik
