@@ -1,18 +1,35 @@
-import React, { useState } from "react";
-import { useContactListener } from "../helpers/firebase";
+import { Grid } from "@mui/material";
 import BlogCard from "../components/BlogCard";
+import { useFetch } from "../helpers/functions";
+import loading from "../assets/loading-gif.gif";
 
-const DashBoard = () => {
-  const [blogList, setBlogList] = useState([]);
-  useContactListener(setBlogList);
-
+const Dashboard = () => {
+  const { isLoading, blogList } = useFetch();
+  console.log(isLoading, blogList);
   return (
-    <div>
-      {blogList.map((item) => {
-        return <BlogCard key={item.id} {...item} />;
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      wrap="wrap"
+      spacing={3}
+      sx={{
+        flexGrow: 1,
+        marginTop: "6rem",
+      }}
+    >
+      {isLoading && (
+        <img src={loading} alt="" width={100} style={{ marginTop: "5rem" }} />
+      )}
+      {blogList?.map((item) => {
+        return (
+          <Grid item key={item.id}>
+            <BlogCard item={item} />
+          </Grid>
+        );
       })}
-    </div>
+    </Grid>
   );
 };
 
-export default DashBoard;
+export default Dashboard;
